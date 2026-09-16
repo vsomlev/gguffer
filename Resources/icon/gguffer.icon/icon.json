@@ -1,4 +1,7 @@
 {
+  "features" : [
+    "refractivity"
+  ],
   "fill-specializations" : [
     {
       "value" : {
@@ -17,7 +20,7 @@
     {
       "blend-mode-specializations" : [
         {
-          "appearance" : "tinted",
+          "appearance" : "dark",
           "value" : "normal"
         }
       ],
@@ -30,16 +33,27 @@
               "appearance" : "dark",
               "value" : {
                 "linear-gradient" : [
-                  "extended-srgb:1.00000,0.21961,0.23529,1.00000",
-                  "extended-srgb:0.79608,0.18824,0.87843,1.00000"
-                ]
+                  "extended-srgb:0.79608,0.18824,0.87843,1.00000",
+                  "extended-srgb:1.00000,0.21961,0.23529,1.00000"
+                ],
+                "orientation" : {
+                  "start" : {
+                    "x" : 0.2299643123851104,
+                    "y" : 0.18231419900561752
+                  },
+                  "stop" : {
+                    "x" : 0.777988209443934,
+                    "y" : 0.9145412281268158
+                  }
+                }
               }
             }
           ],
-          "image-name" : "shape 3.png",
-          "name" : "shape-new",
+          "hidden" : false,
+          "image-name" : "text1 3.png",
+          "name" : "text1 3",
           "position" : {
-            "scale" : 0.5,
+            "scale" : 0.85,
             "translation-in-points" : [
               0,
               0
@@ -48,25 +62,19 @@
         }
       ],
       "lighting" : "individual",
-      "opacity-specializations" : [
-        {
-          "appearance" : "tinted",
-          "value" : 1
-        }
-      ],
       "refractivity" : {
-        "depth" : 0.6901953125,
-        "enabled" : false,
-        "strength" : 0.935
+        "depth" : 0,
+        "enabled" : true,
+        "strength" : 0.5
       },
       "shadow" : {
         "kind" : "layer-color",
-        "opacity" : 0.5
+        "opacity" : 0.56
       },
       "specular" : true,
       "translucency" : {
         "enabled" : true,
-        "value" : 0.24
+        "value" : 0.41
       }
     }
   ],
