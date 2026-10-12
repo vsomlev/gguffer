@@ -47,6 +47,12 @@
                   }
                 }
               }
+            },
+            {
+              "appearance" : "tinted",
+              "value" : {
+                "solid" : "display-p3:0.24033,0.56141,1.00000,1.00000"
+              }
             }
           ],
           "hidden" : false,
@@ -62,6 +68,12 @@
         }
       ],
       "lighting" : "individual",
+      "opacity-specializations" : [
+        {
+          "appearance" : "tinted",
+          "value" : 1
+        }
+      ],
       "refractivity" : {
         "depth" : 0,
         "enabled" : true,

@@ -82,26 +82,23 @@ final class SettingsWindowController: NSWindowController, NSTextFieldDelegate {
         reasoningRow.orientation = .horizontal
         reasoningRow.spacing = 8
 
+        let heading = sectionHeading("llama-server")
+        let extraParametersLabel = NSTextField(labelWithString: "Extra parameters")
+
         let stack = NSStackView(views: [
             loadOnStartBox,
-            explanation(
-                "Starts llama-server as soon as a model is opened — whether the app was "
-                    + "launched with it or you picked it with Open Model."),
-            sectionHeading("llama-server"),
+            heading,
             reasoningRow,
-            explanation("Adds --reasoning on/off/auto to every run, or leaves it out."),
-            NSTextField(labelWithString: "Extra parameters"),
+            extraParametersLabel,
             extraParametersField,
-            explanation(
-                "Added to every run. A model with its own parameters — from Start with "
-                    + "Params… — gets those as well, after these, so they win."),
+            explanation("Added to to the beginning of the parameters for llama-server."),
         ])
         stack.orientation = .vertical
         stack.alignment = .leading
         stack.spacing = 6
-        stack.setCustomSpacing(18, after: stack.views[1])
-        stack.setCustomSpacing(12, after: stack.views[2])
-        stack.setCustomSpacing(14, after: stack.views[4])
+        stack.setCustomSpacing(18, after: loadOnStartBox)
+        stack.setCustomSpacing(12, after: heading)
+        stack.setCustomSpacing(14, after: reasoningRow)
         stack.edgeInsets = NSEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
         stack.translatesAutoresizingMaskIntoConstraints = false
 
